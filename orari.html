@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Orari</title>
+    <link rel="icon" type="image/x-icon" href="assets/orari.png">
+    <style>
+        /* Rimuove margini e padding del body e gestisce l'overflow */
+        body {
+            zoom 80%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Evita barre di scorrimento indesiderate */
+            height: 100vh; /* Imposta l'altezza del body al 100% della finestra del browser */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa; /* Colore di sfondo della pagina */
+        }
+
+        /* Stile per il contenitore dell'iframe */
+        .iframe-container {
+            position: relative;
+            width: 80vw; /* 80% della larghezza della finestra del browser */
+            height: 60vh; /* 60% dell'altezza della finestra del browser */
+            max-width: 1200px; /* Larghezza massima per grandi schermi */
+            max-height: 800px; /* Altezza massima per grandi schermi */
+            overflow: hidden;
+            border-radius: 10px; /* Angoli arrotondati */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per un effetto di profondità */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida per le animazioni */
+        }
+
+        .iframe-container:hover {
+            transform: scale(1.05); /* Leggero ingrandimento al passaggio del mouse */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombra più marcata al passaggio del mouse */
+        }
+
+        /* Stile per l'iframe stesso */
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iframe-container">
+        <iframe src="https://www.istitutomontani.edu.it/orario24-25provvisorio1/" frameborder="0"></iframe>
+    </div>
+</body>
+
+</html>
