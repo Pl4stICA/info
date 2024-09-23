@@ -44,6 +44,41 @@
             height: 100%;
             border: none;
         }
+         .menu-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: #fff;
+            background: linear-gradient(145deg, #007bff, #0056b3);
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;
+            border: 1px solid transparent;
+        }
+
+        /* Effetto hover */
+        .menu-button:hover {
+            background: linear-gradient(145deg, #0056b3, #003d80);
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Effetto focus */
+        .menu-button:focus {
+            outline: none;
+            border: 1px solid #0056b3;
+            box-shadow: 0 0 0 4px rgba(0, 91, 255, 0.2);
+        }
+
+        /* Stili per i dispositivi mobili */
+        @media (max-width: 600px) {
+            .menu-button {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
     </style>
 </head>
 
