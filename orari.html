@@ -7,30 +7,28 @@
     <title>Orari</title>
     <link rel="icon" type="image/x-icon" href="assets/orari.png">
     <style>
-      
         body {
-            zoom 50%;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Evita barre di scorrimento indesiderate */
-            height: 100vh; /* Imposta l'altezza del body al 100% della finestra del browser */
+            overflow: hidden; /* Prevents unwanted scrollbars */
+            height: 100vh; /* Sets the body height to 100% of the viewport */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f8f9fa; /* Colore di sfondo della pagina */
+            background-color: #f8f9fa; /* Page background color */
         }
 
-     
         .iframe-container {
             position: relative;
-            width: 80vw; /* 80% della larghezza della finestra del browser */
-            height: 60vh; /* 60% dell'altezza della finestra del browser */
-            max-width: 1200px; /* Larghezza massima per grandi schermi */
-            max-height: 800px; /* Altezza massima per grandi schermi */
+            width: 80vw; /* 80% of the viewport width */
+            height: 60vh; /* 60% of the viewport height */
+            max-width: 1200px; /* Max width for larger screens */
+            max-height: 800px; /* Max height for larger screens */
             overflow: hidden;
             border-radius: 10px; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per un effetto di profondità */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida per le animazioni */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for animations */
         }
 
         .iframe-container:hover {
@@ -38,14 +36,13 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
-        
         .iframe-container iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-         .menu-button {
-            display: inline-block;
+
+        .menu-button {
             padding: 1rem 2rem;
             font-size: 1.2rem;
             color: #fff;
@@ -56,24 +53,24 @@
             transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
             font-weight: bold;
             border: 1px solid transparent;
-             text-aling: center;
+            text-align: center; /* Fixed typo */
         }
 
-        /* Effetto hover */
+        /* Hover effect */
         .menu-button:hover {
             background: linear-gradient(145deg, #0056b3, #003d80);
             transform: scale(1.05);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Effetto focus */
+        /* Focus effect */
         .menu-button:focus {
             outline: none;
             border: 1px solid #0056b3;
             box-shadow: 0 0 0 4px rgba(0, 91, 255, 0.2);
         }
 
-        /* Stili per i dispositivi mobili */
+        /* Mobile styles */
         @media (max-width: 600px) {
             .menu-button {
                 font-size: 1rem;
@@ -84,44 +81,13 @@
 </head>
 
 <body>
-      
-  
-    
     <div class="iframe-container">
-        <iframe src="https://www.istitutomontani.edu.it/orario24-25provvisorio3-2/" frameborder="0"></iframe>
-      
+        <iframe src="https://www.istitutomontani.edu.it/orario24-25provvisorio3-2/" title="Orario Scolastico" aria-label="Orario scolastico" frameborder="0"></iframe>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div>    
-        <a href="https://www.istitutomontani.edu.it/web/orario-lezioni-e-ricevimento/" class="menu-button">In caso di errore</a>
-        </div>
+
+    <div style="margin-top: 2rem;">    
+        <a href="https://www.istitutomontani.edu.it/web/orario-lezioni-e-ricevimento/" class="menu-button">In caso gli orari no venissero visualizzati correttamente clicca qui</a>
+    </div>
 </body>
 
 </html>
