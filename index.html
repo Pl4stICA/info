@@ -16,11 +16,54 @@
             align-items: center;
             height: 100vh;
             color: #333;
+            overflow: hidden; /* Nascondi overflow per il banner */
+        }
+
+        /* Contenitore del banner */
+        .banner-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Banner di avviso con forma di freccia */
+        .alert-banner {
+            background-color: #95d61b;
+            color: #333;
+            font-weight: bold;
+            font-size: 2rem;
+            padding: 1rem 2rem; /* Aggiunto padding orizzontale */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+            animation: scroll 30s linear infinite;
+            position: relative; /* Necessario per il pseudo-elemento */
+            border-radius: 0 10px 10px 0; /* Angoli arrotondati a destra */
+        }
+
+        .alert-banner::before {
+            content: '';
+            position: absolute;
+            left: -20px; /* Posiziona la punta della freccia */
+            top: 50%;
+            transform: translateY(-50%);
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 20px solid #95d61b; /* Colore della freccia */
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
 
         /* Contenitore del menu */
         .menu-container {
             text-align: center;
+            margin-top: 80px; /* Margine per evitare sovrapposizioni con il banner */
         }
 
         .menu {
@@ -66,10 +109,17 @@
                 font-size: 1rem;
                 padding: 0.8rem 1.5rem;
             }
+
+            .alert-banner {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="banner-container">
+        <div class="alert-banner">Benvenuti al sito InfoScuola! Un modo sicuro e veloce per controllare orari e assenze dell'Istituto Montani. Si consiglia di utilizzare il sito solo su PC, poiché sui dispositivi mobili non è ancora ottimizzato. Se avete idee per migliorarlo, contattatemi all'indirizzo bolognese.riccardo@outlook.it. Buona scuola, ragazzi!</div>
+    </div>
     <div class="menu-container">
         <div class="menu">
             <a href="assenze.html" class="menu-button">Assenze</a>
