@@ -10,25 +10,25 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevents unwanted scrollbars */
-            height: 100vh; /* Sets the body height to 100% of the viewport */
+            overflow: hidden; 
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f8f9fa; /* Page background color */
+            background-color: #f8f9fa; 
         }
 
         .iframe-container {
             position: relative;
-            width: 80vw; /* 80% of the viewport width */
-            height: 60vh; /* 60% of the viewport height */
-            max-width: 1200px; /* Max width for larger screens */
-            max-height: 800px; /* Max height for larger screens */
+            width: 80vw; 
+            height: 60vh; 
+            max-width: 1200px; 
+            max-height: 800px; 
             overflow: hidden;
             border-radius: 10px; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth effect */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for animations */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
         }
 
         .iframe-container:hover {
@@ -53,24 +53,23 @@
             transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
             font-weight: bold;
             border: 1px solid transparent;
-            text-align: center; /* Fixed typo */
+            text-align: center; 
         }
 
-        /* Hover effect */
+    
         .menu-button:hover {
             background: linear-gradient(145deg, #0056b3, #003d80);
             transform: scale(1.05);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Focus effect */
         .menu-button:focus {
             outline: none;
             border: 1px solid #0056b3;
             box-shadow: 0 0 0 4px rgba(0, 91, 255, 0.2);
         }
 
-        /* Mobile styles */
+  
         @media (max-width: 600px) {
             .menu-button {
                 font-size: 1rem;
